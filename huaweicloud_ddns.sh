@@ -1,5 +1,5 @@
 #!/bin/bash
-
+stty erase ^h
 #ZONE_ID和RECORDSET_ID，分别为域名id和主机id，请通过 get_id.sh 或官方api获取 https://dns.myhuaweicloud.com/v2/zones 
 #ACCESS_KEY和ACCESS_SECRET请在 我的凭证-访问密钥中生成
 #详情请参考官方文档 https://support.huaweicloud.com/dns/index.html 

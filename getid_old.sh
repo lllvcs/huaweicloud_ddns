@@ -1,4 +1,7 @@
 #!/bin/bash
+stty erase ^h
+# Author LVCS
+# https://github.com/lllvcs/huaweicloud_ddns
 #在运行此脚本之前，请先在DNS管理控制台内添加对应域名记录！
 #Please add the corresponding domain name record in the DNS management console before running this script!
 
