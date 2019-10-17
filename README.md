@@ -19,9 +19,7 @@ chmod +x ./huaweicloud_ddns.sh
 ## 首次操作
 第一步，先在DNS管理控制台```https://console.huaweicloud.com/dns/```内添加对应域名解析记录
 
-第二步，在```getid.sh```内按照提示填写相应信息。
-
-运行```getid.sh```，获取需要解析域名的```ZONE_ID```和```RECORDSET_ID```
+第二步，在```getid.sh```内按照提示填写相应信息。运行```getid.sh```，获取需要解析域名的```ZONE_ID```和```RECORDSET_ID```
 
 第三步，在```huaweicloud_ddns.sh```内填写 ```ZONE_ID``` ```RECORDSET_ID```  ```ACCESS_KEY``` ```ACCESS_SECRET```
 
