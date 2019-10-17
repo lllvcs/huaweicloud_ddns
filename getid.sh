@@ -8,11 +8,11 @@ stty erase ^h
 
 clear
 echo -e "\033[1;41;37m 欢迎使用 ZONE_ID RECORDSET_ID 生成脚本 \033[0m" 
-read -p "请输入用户名 user name： " username
-read -p "请输入密码 password： " password
-read -p "请输入账户名 account name： " accountname
-read -p "请输入域名 domain name： " domain
-read -p "请输入主机名 host name： " host
+read -p "请输入用户名 user name: " username
+read -p "请输入密码 password: " password
+read -p "请输入账户名 account name: " accountname
+read -p "请输入域名 domain name: " domain
+read -p "请输入主机名 host name: " host
 echo ""
 clear
 
