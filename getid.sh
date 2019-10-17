@@ -61,4 +61,4 @@ recordsets="$(curl -L -k -s -D - -o /dev/null GET \
 echo -e "\033[1;41;37m 第一个为RECORDSET_ID，第二个为ZONE_ID，第三个为PROJECT_ID(不用管) \033[0m" 
 echo -e "\033[1;41;37m 若输入数据有误，仅会返回REQUEST_ID 或空值 \033[0m" 
 echo -e "\033[1;41;37m The FRIST one is RECORDSET_ID, the SECOND is ZONE_ID, and the LAST is PROJECT_ID \033[0m" 
-echo $recordsets
+echo -e "\033[1;33m$recordsets\033[0m"  
