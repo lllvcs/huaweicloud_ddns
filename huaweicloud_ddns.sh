@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#ZONE_ID和RECORDSET_ID，分别为域名id和子域id，请通过官方api获取(https://dns.myhuaweicloud.com/v2/zones)
-#ACCESS_KEY和ACCESS_SECRET请在我的凭证-访问密钥中生成
-#详情请参考官方文档(https://support.huaweicloud.com/api-dns/zh-cn_topic_0132421999.html)
+#ZONE_ID和RECORDSET_ID，分别为域名id和主机id，请通过 get_id.sh 或官方api获取 https://dns.myhuaweicloud.com/v2/zones 
+#ACCESS_KEY和ACCESS_SECRET请在 我的凭证-访问密钥中生成
+#详情请参考官方文档 https://support.huaweicloud.com/dns/index.html 
 
 ZONE_ID="ZONE_ID"
 RECORDSET_ID="RECORDSET_ID"
@@ -13,10 +13,18 @@ ACCESS_SECRET="ACCESS_SECRET"
 #从外网api获取ip地址(默认开启)
 REMOTE_RESOLVE=1
 
+#获取ip地址网址
+GETIPURL="https://api.ip.la"
+#GETIPURL="http://ip.sb"
+#GETIPURL="http://ip.6655.com/ip.aspx"
+#GETIPURL="http://ip.3322.net"
+#GETIPURL="http://members.3322.org/dyndns/getip"
+
 #或从网卡获取ip地址(填写网卡名)
 INTERFACE=""
 
 TARGET_IP=""
+
 #Debug模式(默认关闭)
 DEBUG=0
 
@@ -98,15 +106,15 @@ if [ -z $TARGET_IP ]; then
 	if [ $REMOTE_RESOLVE -eq 1 ]; then
 		if [ $DEBUG -eq 1 ]; then
 			if [ $INTERFACE ]; then
-				TARGET_IP=$(curl --interface $INTERFACE http://members.3322.org/dyndns/getip)
+				TARGET_IP=$(curl --interface $INTERFACE $GETIPURL)
 			else
-				TARGET_IP=$(curl http://members.3322.org/dyndns/getip)
+				TARGET_IP=$(curl $GETIPURL)
 			fi
 		else
 			if [ $INTERFACE ]; then
-				TARGET_IP=$(curl -s --interface $INTERFACE http://members.3322.org/dyndns/getip)
+				TARGET_IP=$(curl -s --interface $INTERFACE $GETIPURL)
 			else
-				TARGET_IP=$(curl -s http://members.3322.org/dyndns/getip)
+				TARGET_IP=$(curl -s $GETIPURL)
 			fi
 		fi	
 	else
