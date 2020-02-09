@@ -30,7 +30,7 @@ GETIPURL="ip.sb"
 REMOTE_RESOLVE=1
 
 #从网卡获取ip地址(填写网卡名 如eth0 ens3)
-#并请根据实际情况填写sed行数(第88 90行处)
+#并请根据实际情况填写sed行数(第98行处)
 INTERFACE=""
 
 TARGET_IP=""
