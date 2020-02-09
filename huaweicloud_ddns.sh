@@ -42,7 +42,7 @@ iam="iam.myhuaweicloud.com"
 
 dns="dns.myhuaweicloud.com"
 #dns="dns.ap-southeast-1.myhuaweicloud.com"
-#dns="dns.ap-southeast-1.myhuaweicloud.com"
+#dns="dns.ap-southeast-3.myhuaweicloud.com"
 
 
 token_X="$(
