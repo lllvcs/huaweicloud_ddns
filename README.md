@@ -7,6 +7,9 @@ apt-get update
 apt-get install wget curl dnsutils openssl cron -y
 wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/old/getid.sh
 wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/old/huaweicloud_ddns.sh
+OR
+wget -N --no-check-certificate https://gitee.com/lvcs/huaweicloud_ddns/raw/old/getid.sh
+wget -N --no-check-certificate https://gitee.com/lvcs/huaweicloud_ddns/raw/old/huaweicloud_ddns.sh
 chmod +x ./huaweicloud_ddns.sh
 chmod +x ./getid.sh
 ```
@@ -16,6 +19,9 @@ centos
 yum install wget curl bind-utils openssl cron -y
 wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/old/getid.sh
 wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/old/huaweicloud_ddns.sh
+OR
+wget -N --no-check-certificate https://gitee.com/lvcs/huaweicloud_ddns/raw/old/getid.sh
+wget -N --no-check-certificate https://gitee.com/lvcs/huaweicloud_ddns/raw/old/huaweicloud_ddns.sh
 chmod +x ./huaweicloud_ddns.sh
 chmod +x ./getid.sh
 ```
@@ -32,5 +38,5 @@ chmod +x ./getid.sh
 ## 设置定时任务
 ```
 crontab -e
-*/1 * * * * bash /root/huaweicloud_ddns.sh
+* * * * * bash /root/huaweicloud_ddns.sh
 ```
