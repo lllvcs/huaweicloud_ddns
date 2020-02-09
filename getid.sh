@@ -52,7 +52,7 @@ token="$(echo $token_X | awk -F ' ' '{print $2}')"
 #Zone_ID="$(echo $Zone_ID_RAW|grep -Eo "\"id\":\"[0-9a-z]*\",\"name\":\"$domain.\",\"description\""|grep -o "id\":\"[0-9a-z]*\""| awk -F : '{print $2}'|grep -o "[a-z0-9]*")"
 
 recordsets="$(curl -L -k -s -D - -o /dev/null GET \
-  "https://dns.myhuaweicloud.com/v2.1/recordsets?name=$host.$domain." \
+  "https://dns.myhuaweicloud.com/v2/recordsets?name=$host.$domain." \
   -H 'content-type: application/json' \
   -H 'X-Auth-Token: '$token | grep -o "id\":\"[0-9a-z]*\""| awk -F : '{print $2}'|grep -o "[a-z0-9]*"
   )"
