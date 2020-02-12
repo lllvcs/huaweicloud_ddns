@@ -12,6 +12,8 @@ apt-get update
 apt-get install wget curl dnsutils cron -y
 wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/master/huaweicloud_ddns.sh
 OR
+wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/lllvcs/huaweicloud_ddns@master/huaweicloud_ddns.sh
+OR
 wget -N --no-check-certificate https://gitee.com/lvcs/huaweicloud_ddns/raw/master/huaweicloud_ddns.sh
 chmod +x ./huaweicloud_ddns.sh
 ```
@@ -20,6 +22,8 @@ Centos
 ```
 yum install wget curl bind-utils cron -y
 wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/master/huaweicloud_ddns.sh
+OR
+wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/lllvcs/huaweicloud_ddns@master/huaweicloud_ddns.sh
 OR
 wget -N --no-check-certificate https://gitee.com/lvcs/huaweicloud_ddns/raw/master/huaweicloud_ddns.sh
 chmod +x ./huaweicloud_ddns.sh
