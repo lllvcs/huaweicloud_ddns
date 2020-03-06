@@ -22,6 +22,7 @@ host="www"
 
 #获取ip地址网址
 GETIPURL="ip.sb"
+#GETIPURL="api.myip.la"
 #GETIPURL="http://ip.6655.com/ip.aspx"
 #GETIPURL="http://ip.3322.net"
 #GETIPURL="http://members.3322.org/dyndns/getip"
