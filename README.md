@@ -11,23 +11,23 @@ Ubuntu/Debian
 ```
 apt-get update
 apt-get install wget curl dnsutils cron -y
-wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/cname/huaweicloud_ddns.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/cname/huaweicloud_ddns_cname.sh
 OR
-wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/lllvcs/huaweicloud_ddns@cname/huaweicloud_ddns.sh
+wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/lllvcs/huaweicloud_ddns@cname/huaweicloud_ddns_cname.sh
 OR
-wget -N --no-check-certificate https://gitee.com/lvcs/huaweicloud_ddns/raw/cname/huaweicloud_ddns.sh
+wget -N --no-check-certificate https://gitee.com/lvcs/huaweicloud_ddns/raw/cname/huaweicloud_ddns_cname.sh
 chmod +x ./huaweicloud_ddns.sh
 ```
 
 Centos
 ```
 yum install wget curl bind-utils cron -y
-wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/cname/huaweicloud_ddns.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/cname/huaweicloud_ddns_cname.sh
 OR
-wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/lllvcs/huaweicloud_ddns@cname/huaweicloud_ddns.sh
+wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/lllvcs/huaweicloud_ddns@cname/huaweicloud_ddns_cname.sh
 OR
 wget -N --no-check-certificate https://gitee.com/lvcs/huaweicloud_ddns/raw/cname/huaweicloud_ddns.sh
-chmod +x ./huaweicloud_ddns.sh
+chmod +x ./huaweicloud_ddns_cname.sh
 ```
 
 ## 首次操作
