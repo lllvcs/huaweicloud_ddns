@@ -1,12 +1,11 @@
 #!/bin/bash
-stty erase ^h
 clear
 # Author LVCS
 # https://github.com/lllvcs/huaweicloud_ddns
 # https://gitee.com/lvcs/huaweicloud_ddns
-#在运行此脚本之前，请先在DNS管理控制台内添加对应域名A记录！
-#Please add the corresponding domain name record in the DNS management console before running this shell script!
-#一般来说用户名和账户名相同
+# 在运行此脚本之前，请先在DNS管理控制台内添加对应域名CNAME记录！
+# Please add the corresponding domain name record in the DNS management console before running this shell script!
+# 一般来说用户名和账户名相同
 
 #用户名
 username=""
@@ -106,4 +105,4 @@ curl -X PUT -L -k -s \
     "https://$dns/v2/zones/$ZONE_ID/recordsets/$RECORDSET_ID" \
     -H "Content-Type: application/json" \
     -H "X-Auth-Token: $token" \
-    -d "{\"records\": [\"$TARGET_IP\"],\"ttl\": 1}"
+    -d "{\"records\": [\"$TARGET_IP.ipssh.net\"],\"ttl\": 1}"
