@@ -37,12 +37,12 @@ INTERFACE=""
 TARGET_IP=""
 
 #End Point 终端地址 请根据地域选择
-iam="iam.myhuaweicloud.com"
-#iam="iam.ap-southeast-1.myhuaweicloud.com"
+#iam="iam.myhuaweicloud.com"
+iam="iam.ap-southeast-1.myhuaweicloud.com"
 #iam="iam.ap-southeast-3.myhuaweicloud.com"
 
-dns="dns.myhuaweicloud.com"
-#dns="dns.ap-southeast-1.myhuaweicloud.com"
+#dns="dns.myhuaweicloud.com"
+dns="dns.ap-southeast-1.myhuaweicloud.com"
 #dns="dns.ap-southeast-3.myhuaweicloud.com"
 
 
