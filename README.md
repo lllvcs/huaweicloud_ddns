@@ -10,7 +10,7 @@
 Ubuntu/Debian
 ```
 apt-get update
-apt-get install wget curl dnsutils cron -y
+apt-get install wget curl dnsutils net-tools cron -y
 wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/cname/huaweicloud_ddns_cname.sh
 OR
 wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/lllvcs/huaweicloud_ddns@cname/huaweicloud_ddns_cname.sh
@@ -21,7 +21,7 @@ chmod +x ./huaweicloud_ddns.sh
 
 Centos
 ```
-yum install wget curl bind-utils cron -y
+yum install wget curl bind-utils net-tools cron -y
 wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/cname/huaweicloud_ddns_cname.sh
 OR
 wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/lllvcs/huaweicloud_ddns@cname/huaweicloud_ddns_cname.sh
