@@ -4,7 +4,7 @@
 ubuntu/debian
 ```
 apt-get update
-apt-get install wget curl dnsutils openssl cron -y
+apt-get install wget curl dnsutils openssl net-tools cron -y
 wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/old/getid.sh
 wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/old/huaweicloud_ddns.sh
 OR
@@ -16,7 +16,7 @@ chmod +x ./getid.sh
 
 centos
 ```
-yum install wget curl bind-utils openssl cron -y
+yum install wget curl bind-utils openssl net-tools cron -y
 wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/old/getid.sh
 wget -N --no-check-certificate https://raw.githubusercontent.com/lllvcs/huaweicloud_ddns/old/huaweicloud_ddns.sh
 OR
