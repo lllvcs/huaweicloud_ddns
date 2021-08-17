@@ -25,15 +25,11 @@ INTERFACE=""
 TARGET_IP=""
 
 # 获取ip地址网址
-# 国内API
-GETIPURL="http://ip.3322.net"
-#GETIPURL="http://members.3322.org/dyndns/getip"
-#GETIPURL="https://myip.ipip.net/"
-# 国外API
-#GETIPURL="http://whatismyip.akamai.com"
-#GETIPURL="https://api.ip.sb/ip"
-#GETIPURL="https://api.myip.la/"
-#GETIPURL="https://v4.ip.zxinc.org/getip"
+GETIPURL="https://api.ip.sb/ip"
+#GETIPURL="https://api.myip.la"
+#GETIPURL="https://v6.ip.zxinc.org/getip"
+#GETIPURL="https://api6.ipify.org"
+#GETIPURL="https://api.ip.gs/ip"
 
 # End Point 终端地址 请根据地域选择，默认为北京1
 IAM="iam.myhuaweicloud.com"
@@ -90,15 +86,15 @@ TOKEN="$(echo $TOKEN_X | awk -F ' ' '{print $2}')"
 if [ -z $TARGET_IP ]; then
     if [ $REMOTE_RESOLVE -eq 1 ]; then
         if [ $INTERFACE ]; then
-            TARGET_IP=$(curl -s -4 --interface $INTERFACE $GETIPURL | grep -oE '([0-9]{1,3}.?){4}' | sed -n 1p)
+            TARGET_IP=$(curl -s -6 --interface $INTERFACE $GETIPURL)
         else
-            TARGET_IP=$(curl -s -4 $GETIPURL | grep -oE '([0-9]{1,3}.?){4}' | sed -n 1p)
+            TARGET_IP=$(curl -s -6 $GETIPURL)
         fi
     else
         if [ $INTERFACE ]; then
-            TARGET_IP=$(ifconfig $INTERFACE | grep 'inet ' | grep -oE '([0-9]{1,3}.?){4}' | sed -n 1p)
+            TARGET_IP=$(ifconfig $INTERFACE | grep 'inet6 ' | grep -oE '(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))' | sed -n 1p)
         else
-            TARGET_IP=$(ifconfig | grep 'inet ' | grep -oE '([0-9]{1,3}.?){4}' | sed -n 1p)
+            TARGET_IP=$(ifconfig | grep 'inet6 ' | grep -oE '(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))' | sed -n 1p)
         fi
     fi
 fi
